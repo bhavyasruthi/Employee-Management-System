@@ -60,7 +60,6 @@ private static void getAllEmployees() {
 	SessionFactory sessionfactory =  new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 	Session session = sessionfactory.openSession();
     try{
-	//Transaction tnx = session.beginTransaction();
 	Query q= session.createQuery("from Employee");
 	List<Employee> employees = (List<Employee>)q.list();
 	for (Employee temp : employees) {
@@ -102,10 +101,9 @@ public static void addEmployee(){
     try{
 	Transaction tnx = session.beginTransaction();
 	Employee e1=new Employee(); 
-	//e1.setEid(2);
-	e1.setFname("xxx");
-	e1.setLname("rttgt");
-	e1.setDesignation("Accobdunt Lead");
+	e1.setFname("Bhavya Sruthi");
+	e1.setLname("sode");
+	e1.setDesignation("Account Lead");
 	Date d = java.sql.Date.valueOf("1987-11-15");
 	e1.setDob(d);
 	e1.setDoj(java.sql.Date.valueOf("2017-08-01"));
