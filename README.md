@@ -17,8 +17,10 @@ This is JavaBean class with setter and getter methods for properties of Employee
 
 ### EmployeeDataManager.java
 It has all methods to access database table, Employee using Hibernate queries. After creating Configuration instance build a SessionFactory. From this SessionFactory, open a session and perform opertaions on database by beginning Transaction. 
-1. addEmployee : This method adds new employee record.save() of hibernate pushes addition of record in to queue and once transaction is committed it will be added to database.
+1. addEmployee : This method adds new employee record. save() of hibernate pushes addition of record in to queue and once transaction is committed it will be added to database.
 2. getById : This method returns employee details based on id. It uses get() of hibernate is used by sending hibernate class and id. 
 3. UpdateById : This method updates employee details based on id. It uses update() of hibernate to update saved object. 
-4. RemoveById : 
-5. HQL, 6-GetAllEmployees,7-CritrtiaQueries
+4. RemoveById : This method delete employee record based on id. It uses delete() of hibernate to delete saved object.
+5. HQL : This method retrieves selected employee records by invoking HQL query using createQuery(). 
+6. GetAllEmployees : This method retrieves all employee records by invoking HQL query using createQuery(). 
+7. CritrtiaQueries : This method retrieves selected employee records by invoking Criteria using createQuery(). 
